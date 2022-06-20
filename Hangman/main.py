@@ -58,6 +58,9 @@ stages = ['''
 =========
 ''']
 
+#life of user
+lives =6
+
 #create sample wordlist
 word_list = ["aardvark", "baboon", "camel"]
 
@@ -88,11 +91,22 @@ while not end_of_game:
         #check for equality
         if letter==guess:
             #update display list
-            display[position]= letter    
-
+            display[position]= letter         
+    #if guessed letter not letter  
+    if guess not in chosen_word:
+        #reduce lives by one 
+        lives -=1
+        #check for lives
+        if lives == 0:
+            end_of_game=True;
+            print("YOU LOST THE GAME!! BETTER LUCK NEXT TIME")
     #print display
-    print(display)
+    print(f"{''.join(display)}")
 
     #check there if there is any "_" left
     if "_" not in display:
         end_of_game=True
+        print("WOW! YOU WON ")
+    
+    #print hangMan stages corresponding to lives
+    print(stages[lives])
