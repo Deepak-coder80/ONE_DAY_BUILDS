@@ -13,7 +13,7 @@ word_list = [
 'banjo', 
 'bayou', 
 'beekeeper', 
-'bikini', 
+'bike', 
 'blitz', 
 'blizzard', 
 'boggle', 
