@@ -7,7 +7,7 @@ from hangman_words import word_list
 import hangman_art
 
 #life of user
-lives = 5
+lives = 7
 
 #choose a word from the wordlist
 chosen_word = random.choice(word_list)
